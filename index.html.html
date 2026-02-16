@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Happy Birthday Sruthi 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+body{
+margin:0;
+font-family:'Comic Sans MS', cursive;
+background:linear-gradient(45deg,#ffb3ec,#c77dff,#ff8fab);
+background-size:400% 400%;
+animation:bg 12s ease infinite;
+overflow-x:hidden;
+color:white;
+text-align:center;
+}
+
+@keyframes bg{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+.slide{
+display:none;
+min-height:100vh;
+padding:40px;
+position:relative;
+animation:flip 1s ease;
+}
+
+@keyframes flip{
+from{transform:rotateY(90deg);opacity:0;}
+to{transform:rotateY(0);opacity:1;}
+}
+
+.active{display:block;}
+
+h1{
+font-size:70px;
+text-shadow:0 0 25px #ff4fd8;
+}
+
+/* BIG MULTICOLOR LIGHT CHAIN */
+.light{
+position:absolute;
+top:0;
+width:100%;
+font-size:30px;
+animation:blink 0.8s infinite alternate;
+}
+
+@keyframes blink{
+0%{color:#ff4fd8;}
+25%{color:#ffd60a;}
+50%{color:#00f5d4;}
+75%{color:#ff006e;}
+100%{color:#ffffff;}
+}
+
+/* BALLOONS */
+.balloon{
+position:absolute;
+font-size:90px;
+animation:float 5s infinite ease-in-out;
+}
+
+@keyframes float{
+0%{transform:translateY(0);}
+50%{transform:translateY(-80px);}
+100%{transform:translateY(0);}
+}
+
+/* MOVING FLOWERS */
+.flower{
+position:absolute;
+font-size:60px;
+animation:spin 6s linear infinite;
+}
+
+@keyframes spin{
+0%{transform:rotate(0deg);}
+100%{transform:rotate(360deg);}
+}
+
+/* GLITTER RAIN */
+.sparkle{
+position:absolute;
+font-size:25px;
+animation:rain 4s linear infinite;
+}
+
+@keyframes rain{
+0%{transform:translateY(-100px);opacity:0;}
+50%{opacity:1;}
+100%{transform:translateY(800px);opacity:0;}
+}
+
+/* BEAUTIFUL BOXES */
+.box{
+background:linear-gradient(135deg,#ff8fab,#c77dff);
+padding:40px;
+margin:30px auto;
+width:80%;
+border-radius:40px;
+font-size:28px;
+font-weight:bold;
+box-shadow:0 0 40px #fff;
+display:none;
+}
+
+/* BUTTON */
+button{
+padding:20px 40px;
+font-size:22px;
+border:none;
+border-radius:40px;
+background:linear-gradient(45deg,#ff006e,#c77dff);
+color:white;
+cursor:pointer;
+margin-top:25px;
+box-shadow:0 0 20px white;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.2);
+}
+
+/* BIG CAKE */
+.cake{
+font-size:200px;
+animation:bounce 2s infinite;
+}
+
+@keyframes bounce{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-30px);}
+}
+
+</style>
+</head>
+<body>
+
+<!-- BACKGROUND MUSIC -->
+<audio autoplay loop>
+<source src="https://www2.cs.uic.edu/~i101/SoundFiles/HappyBirthday.mid" type="audio/mpeg">
+</audio>
+
+<!-- SLIDE 1 -->
+<div class="slide active" id="slide1">
+
+<div class="light">💡💖💡💜💡💛💡💙💡💚💡💖💡💜💡</div>
+
+<div class="balloon" style="left:5%;top:40%;">🎈</div>
+<div class="balloon" style="left:20%;top:70%;">🎈</div>
+<div class="balloon" style="right:5%;top:50%;">🎈</div>
+<div class="balloon" style="right:20%;top:80%;">🎈</div>
+
+<div class="flower" style="left:10%;top:20%;">🌸</div>
+<div class="flower" style="right:10%;top:25%;">🌷</div>
+
+<div class="sparkle" style="left:30%;animation-delay:1s;">✨</div>
+<div class="sparkle" style="left:60%;animation-delay:2s;">✨</div>
+<div class="sparkle" style="left:80%;animation-delay:3s;">✨</div>
+
+<h1>HAPPY BIRTHDAY SRUTHI 💖🎉</h1>
+<p style="font-size:30px;">Today is your magical day ✨</p>
+
+<button onclick="confetti();nextSlide(2)">Open Surprise 🎁</button>
+
+</div>
+
+<!-- SLIDE 2 -->
+<div class="slide" id="slide2">
+
+<h1>Messages From The Heart 💌</h1>
+
+<button onclick="showBox('m1')">Open 💖</button>
+<div class="box" id="m1">You are not just special… you are once in a lifetime 🌸✨</div>
+
+<button onclick="showBox('m2')">Open 🌸</button>
+<div class="box" id="m2">May your life be as bright as your smile and as beautiful as your heart 💕</div>
+
+<button onclick="showBox('m3')">Open 🎀</button>
+<div class="box" id="m3">The world became a better place the day you were born 🎉💖</div>
+
+<button onclick="confetti();nextSlide(3)">Next Surprise ✨</button>
+
+</div>
+
+<!-- SLIDE 3 -->
+<div class="slide" id="slide3">
+
+<h1>Special Wishes Just For You 🌷</h1>
+
+<div class="box" style="display:block;">May happiness hug you tightly every single day 💞</div>
+<div class="box" style="display:block;">Success, love, peace and endless laughter are waiting for you 🌟</div>
+<div class="box" style="display:block;">Never forget how amazing and strong you are 💖</div>
+<div class="box" style="display:block;">🌸 From my side: Sruthi, may this year surprise you with miracles, beautiful memories and dreams that finally come true. Keep shining always ✨💜</div>
+
+<button onclick="confetti();nextSlide(4)">Final Surprise 🎂</button>
+
+</div>
+
+<!-- SLIDE 4 -->
+<div class="slide" id="slide4">
+
+<h1>HAPPY BIRTHDAY AGAIN 💕</h1>
+
+<div class="cake">🎂</div>
+
+<div class="box" style="display:block;">May this cake bring sweetness to your life all year long 🍰💖</div>
+<div class="box" style="display:block;">Stay blessed, stay happy, stay YOU 🌸✨</div>
+
+<button onclick="nextSlide(1)">Start Again 💗</button>
+
+</div>
+
+<script>
+function nextSlide(n){
+let slides=document.getElementsByClassName("slide");
+for(let i=0;i<slides.length;i++){
+slides[i].classList.remove("active");
+}
+document.getElementById("slide"+n).classList.add("active");
+}
+
+function showBox(id){
+document.getElementById(id).style.display="block";
+}
+
+/* CONFETTI */
+function confetti(){
+for(let i=0;i<50;i++){
+let conf=document.createElement("div");
+conf.innerHTML="🎊";
+conf.style.position="fixed";
+conf.style.left=Math.random()*100+"%";
+conf.style.top="-10px";
+conf.style.fontSize="30px";
+conf.style.animation="rain 3s linear";
+document.body.appendChild(conf);
+setTimeout(()=>conf.remove(),3000);
+}
+}
+</script>
+
+</body>
+</html>
